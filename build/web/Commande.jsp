@@ -14,10 +14,109 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <style>
+
+            legend {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            table, th, td {
+                border: 1px solid #ddd;
+            }
+
+            th, td {
+                padding: 10px;
+                text-align: left;
+            }
+
+            /* Styles pour les boutons */
+            input[type="submit"] {
+                background-color: #007BFF;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+
+            /* Styles pour les liens de suppression et de modification */
+            a {
+                text-decoration: none;
+                color: #007BFF;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            /* Styles pour le tableau des produits */
+            #example1 {
+                margin: 20px;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            #example1 th, #example1 td {
+                border: 1px solid #ddd;
+                padding: 10px;
+                text-align: left;
+            }
+
+            /* Styles for fieldsets */
+            /* Styles for fieldsets */
+            /* Styles for the container that holds the fieldsets */
+            .fieldset-container {
+                display: flex;
+                justify-content: space-between; /* Space the fieldsets at each end */
+                 background-color: #fff;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                display: flex;
+                justify-content: space-between; 
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Styles for fieldsets */
+            fieldset#gestion-fieldset {
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 10px;
+                width: 30%; /* Set a width for the gestion-fieldset */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            fieldset#liste-fieldset {
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 10px;
+                width: 70%; /* Set a wider width for the liste-fieldset */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+
+
+
+
+
+
+
+        </style>
     </head>
     <body>
+        <div class="fieldset-container">
         <form action="CommandeController" >
-            <fieldset>
+            <fieldset id="gestion-fieldset">
                 <legend>Gestion des commandes</legend>
                 <table border="0">
 
@@ -65,7 +164,7 @@
             </fieldset>
         </form>
 
-        <fieldset>
+        <fieldset id="liste-fieldset">
             <legend>Liste des commandes </legend>
             <table border="0">
                 <thead>
@@ -133,6 +232,6 @@
     document.getElementById("produitSelect").addEventListener("change", calculateTotal);
 </script>
 
-
+        </div>
     </body>
 </html>

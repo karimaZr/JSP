@@ -55,9 +55,9 @@ public class CommandeController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+           
         if (request.getParameter("op") != null) {
-            String op = request.getParameter("op");
+             String op = request.getParameter("op");
             if (op.equals("delete")) {
 
                 ps.delete(ps.getById(Integer.parseInt(request.getParameter("id"))));
